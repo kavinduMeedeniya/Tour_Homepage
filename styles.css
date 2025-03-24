@@ -1,0 +1,587 @@
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background */
+    color: rgb(0, 0, 0);
+    /* Black text */
+    border: 1px solid #ddd;
+    /* Optional border for dropdown */
+}
+
+.dropdown.show .dropdown-menu {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+    justify-content: space-around;
+    /* Space between sections */
+}
+
+/* Style the dropdown sections */
+.dropdown-section {
+    flex: 1;
+    min-width: 250px;
+    /* Minimum width for each section */
+    margin: 0 10px;
+}
+
+.dropdown-section h5 {
+    color: black;
+    /* Black text for section titles */
+    font-size: 1rem;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style dropdown links */
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    /* Black text for items */
+    text-align: left;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    /* Light background on hover */
+}
+
+/* Custom styles for navbar */
+.navbar {
+    background-color: #ffffff;
+    /* White background */
+    color: black;
+    /* Black text */
+}
+
+.navbar .nav-link {
+    color: black;
+    /* Ensure text is black */
+}
+
+.navbar .nav-link:hover {
+    color: #343a40;
+    /* Darker color on hover */
+}
+
+
+
+
+
+
+.first_content{
+    background-image: url(Tour_imgs/wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background-size: cover;
+}
+.first_cont_topic {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.first_cont_quote {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0%;
+
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.first_cont_para {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+@media (max-width: 768px) {
+    .first_cont_topic {
+        font-size: 2rem;
+        padding-top: 30%;
+    }
+}
+
+
+.main_button {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 10%;
+}
+
+.btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #007bff;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .95;
+}
+
+.btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+
+
+.fullAbout {
+    display: flex;
+    justify-content: center;
+}
+
+.about_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    width: 70%;
+}
+
+.why-choose-us {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 30px;
+    flex: 1;
+}
+
+.content h2 {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+    color: #333;
+    position: relative;
+    padding-left: 30px;
+}
+
+.content ul li::before {
+    content: "✔";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content .btn:hover {
+    background-color: #0056b3;
+}
+
+.image {
+    flex: 1;
+    background: url(Tour_imgs/why_choose_us.jpg) no-repeat center center/cover;
+    min-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .why-choose-us {
+        flex-direction: column;
+    }
+
+    .image {
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+        text-align: center;
+    }
+
+    .content ul li {
+        text-align: left;
+    }
+
+    .about_container {
+        width: 100%;
+    }
+}
+
+
+.video_content_topic {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 10%;
+    padding-top: 2%;
+    width: 90%;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.video_content_para {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 10%;
+    padding-top: 4%;
+    width: 90%;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.video_content_message {
+    font-family: monospace;
+    font-size: 1rem;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.videos_here {
+    width: 50%;
+}
+
+#myVideo {
+    width: 100%;
+    max-width: 400px;
+    padding-top: 25%;
+}
+
+
+
+
+
+.container04 {
+    width: 100%;
+    display: flex;
+    background-image: url(Tour_imgs/vidback\(3\).jpg);
+    background-size: cover;
+}
+
+.left {
+    width: 60%;
+    padding: 20px;
+}
+
+.right {
+    width: 40%;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container04{
+        background-image: url(Tour_imgs/Kandy\ to\ Ella\ Train\ Sri\ Lanka.jpg);
+        background-size: cover;
+    }
+    .left,
+    .right{
+        width: 100%;
+    }
+    .container04 {
+        flex-direction: column;
+    }
+
+    .video_content_topic,
+    .video_content_para,
+    .video_content_message {
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
+
+    #myVideo {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        padding-top: 0%;
+    }
+}
+
+
+
+
+
+.latest_tours{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.latest_tours_para {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    padding-left: 7%;
+    padding-right: 7%;
+
+}
+
+
+.toursdiv{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.ourtours{
+    width: 20%;
+    height: 300px;
+    background-color: #000;
+}
+.box1{
+    background-image: url(Tour_imgs/tour1.jpg);
+    background-size: cover;
+}
+.box2{
+    background-image: url(Tour_imgs/tour2.jpg);
+    background-size: cover;
+}
+.box3{
+    background-image: url(Tour_imgs/tour3.jpg);
+    background-size: cover;
+}
+.box4{
+    background-image: url(Tour_imgs/tour4.jpg);
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    
+    .toursdiv {
+        flex-direction: column;
+    }
+
+    .ourtours{
+        width: 80%;
+        height: 350px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+
+
+
+.button2{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.buttonT {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #007bff;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #007bff;
+  }
+  
+  .buttonT:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #007bff;
+    box-shadow: 4px 5px 17px -4px #007bff;
+  }
+  
+  .buttonT::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .buttonT:hover::before {
+    width: 250%;
+  }
+  
+
+
+
+
+
+
+  .footer {
+    background-color: rgb(247, 247, 247);
+    padding: 40px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+  }
+  .footer-column p{
+    font-family: monospace;
+    font-size: large;
+    font-weight: 900;
+  }
+  
+  .footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #555;
+    font-family: monospace;
+    font-size: large;
+    font-weight: 900;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #000;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 30px;
+  }
+
+
+
+
+
+  .fullbackground{
+    background-image: url();
+    background-size: cover;
+  }

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light py-3 shadow-sm fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto justify-content-center w-100">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Book a Tour</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <!-- Dropdown Menu -->
+                <li class="nav-item dropdown position-static">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tours/Packages</a>
+                    <div class="dropdown-menu">
+                        <!-- Section 1 -->
+                        <div class="dropdown-section">
+                            <h5>Section 1</h5>
+                            <a href="#" class="dropdown-item">Link 1</a>
+                            <a href="#" class="dropdown-item">Link 2</a>
+                            <a href="#" class="dropdown-item">Link 3</a>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="dropdown-section">
+                            <h5>Section 2</h5>
+                            <a href="#" class="dropdown-item">Link 4</a>
+                            <a href="#" class="dropdown-item">Link 5</a>
+                            <a href="#" class="dropdown-item">Link 6</a>
+                        </div>
+                        <!-- Section 3 -->
+                        <div class="dropdown-section">
+                            <h5>Section 3</h5>
+                            <a href="#" class="dropdown-item">Link 7</a>
+                            <a href="#" class="dropdown-item">Link 8</a>
+                            <a href="#" class="dropdown-item">Link 9</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let timeout;
+
+            $('body')
+                .on('mouseenter', '.dropdown', function () {
+                    const $dropdown = $(this);
+                    const $dropdownMenu = $('.dropdown-menu', $dropdown);
+                    clearTimeout(timeout); // Clear any existing timeout
+                    $dropdown.addClass('show');
+                    $dropdownMenu.addClass('show');
+                    $('[data-toggle="dropdown"]', $dropdown).attr('aria-expanded', 'true');
+                })
+                .on('mouseleave', '.dropdown', function () {
+                    const $dropdown = $(this);
+                    const $dropdownMenu = $('.dropdown-menu', $dropdown);
+                    timeout = setTimeout(function () { // Delay hiding the dropdown
+                        $dropdown.removeClass('show');
+                        $dropdownMenu.removeClass('show');
+                        $('[data-toggle="dropdown"]', $dropdown).attr('aria-expanded', 'false');
+                    }, 300); // Adjust delay time as needed
+                })
+                .on('mouseenter', '.dropdown-menu', function () {
+                    clearTimeout(timeout); // Prevent hiding when hovering over the dropdown menu
+                })
+                .on('mouseleave', '.dropdown-menu', function () {
+                    const $dropdown = $(this).closest('.dropdown');
+                    timeout = setTimeout(function () {
+                        $dropdown.removeClass('show');
+                        $('.dropdown-menu', $dropdown).removeClass('show');
+                        $('[data-toggle="dropdown"]', $dropdown).attr('aria-expanded', 'false');
+                    }, 300); // Adjust delay time as needed
+                });
+        });
+    </script>
+
+    <div class="fullbackground">
+
+    <div class="first_content">
+        <p class="first_cont_topic">Explore the World with Us</p>
+        <p class="first_cont_quote">"Adventure awaits – let us guide you to unforgettable experiences!"</p>
+        <p class="first_cont_para">Discover the world with our expert-guided tours. From thrilling adventures to serene
+            escapes, we tailor unforgettable journeys just for you. Let’s create lifelong memories together!
+        </p>
+
+        <div class="main_button">
+            <div>
+                <button class="btn"><i class="animation"></i>Reservation<i class="animation"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fullAbout">
+        <div class="about_container">
+            <div class="why-choose-us">
+                <div class="content">
+                    <h2>Why Choose Us</h2>
+                    <p>At [Your Company Name], we offer expert-guided tours that bring destinations to life. Our
+                        experienced
+                        guides ensure you have an unforgettable experience with personalized itineraries and seamless
+                        service.</p>
+                    <ul>
+                        <li>Passionate locals with in-depth knowledge</li>
+                        <li>Tailored to your interests and preferences</li>
+                        <li>We take care of all the details, so you can relax and enjoy</li>
+                    </ul>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="image"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <p class="latest_tours">Our Latest Tours – Unforgettable Adventures</p>
+    <p class="latest_tours_para">"Explore our latest tours featuring England, France, Italy, and Japan. Discover iconic landmarks, rich culture, and breathtaking scenery. Start your journey to unforgettable memories today!"</p>
+
+
+    <div class="toursdiv">
+        <div class="ourtours box1"></div>
+        <div class="ourtours box2"></div>
+        <div class="ourtours box3"></div>
+        <div class="ourtours box4"></div>
+    </div>
+
+
+    <div class="button2">
+        <button class="buttonT">view all</button>
+    </div>
+
+    
+      
+
+
+
+
+    <div class="container04">
+        <div class="left">
+            <p class="video_content_topic">Journey with us, and let every moment become a memory</p>
+            <p class="video_content_para">"Welcome to [Your Company Name]! As the founder of this company, I’m thrilled
+                to
+                share my passion for travel with you. Our goal is to provide exceptional experiences that not only
+                showcase
+                the beauty of each destination but also create lasting memories for all our guests. Every tour we offer
+                is
+                crafted with care and attention to detail, ensuring that you get the most out of your journey. Thank you
+                for
+                trusting us to guide you on your next adventure. I look forward to seeing you on one of our tours soon!
+            </p>
+            <p class="video_content_message">[Owner's Name], Founder & CEO</p>
+        </div>
+        <div class="right">
+            <video id="myVideo" controls>
+                <source src="1220 (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Explore Adventure</h3>
+                <p>"Discover the world's hidden gems. Let us guide you through unforgettable experiences with expert-led tours."</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Tour Services</h3>
+                <ul>
+                    <li><a href="#">Guided City Tours</a></li>
+                    <li><a href="#">Adventure Escapes</a></li>
+                    <li><a href="#">Cultural Experiences</a></li>
+                    <li><a href="#">Private Tours</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tour Packages</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p class="contact-info"><i class="fa-regular fa-envelope"></i> zeaglioncreations.com</p>
+                <p class="contact-info"><i class="fa-solid fa-phone"></i> +123 456 7890</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            Copyright © Zeaglion creations 2024, All Rights Reserved.
+        </div>
+    </div>
+    
+
+
+
+
+    
+
+
+
+</body>
+
+</html>
